@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 96" role="img" aria-labelledby="title desc">
+  <title id="title">Leaning Studios logo</title>
+  <desc id="desc">Leaning Studios wordmark with a leaning audio-bar monogram.</desc>
+  <rect width="276" height="96" fill="none"/>
+  <g aria-hidden="true">
+    <rect x="4" y="8" width="80" height="80" rx="18" fill="#090c10"/>
+    <path d="M22 66 37 24h12L34 66H22Z" fill="#4ee0b8"/>
+    <path d="M47 66 62 24h8L55 66h-8Z" fill="#f2c96d"/>
+    <path d="M22 73h49" stroke="#f5f7fb" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g fill="#f5f7fb">
+    <text x="102" y="45" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="0">Leaning</text>
+    <text x="102" y="72" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="0">Studios</text>
+  </g>
+</svg>
