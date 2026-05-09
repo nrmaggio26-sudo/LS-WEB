@@ -7,14 +7,14 @@
   --deep-red: #5f0710;
   --signal-red: #b51626;
   --text: #f2efe7;
-  --muted: #9aa39c;
-  --line: #1c2a22;
-  --green-border: rgba(25, 184, 90, 0.22);
-  --red-border: rgba(181, 22, 38, 0.22);
+  --muted: #a7afa8;
+  --line: #24352b;
+  --green-border: rgba(25, 184, 90, 0.26);
+  --red-border: rgba(181, 22, 38, 0.26);
   --accent: var(--signal-green);
   --accent-strong: #43e879;
   --danger: var(--signal-red);
-  --shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+  --shadow: 0 22px 58px rgba(0, 0, 0, 0.36);
   color-scheme: dark;
 }
 
@@ -74,8 +74,8 @@ button {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid rgba(25, 184, 90, 0.14);
-  background: rgba(5, 6, 7, 0.9);
+  border-bottom: 1px solid rgba(25, 184, 90, 0.16);
+  background: rgba(5, 6, 7, 0.92);
   backdrop-filter: blur(18px);
 }
 
@@ -86,34 +86,34 @@ button {
   gap: 1.5rem;
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 0.85rem 0;
+  padding: 0.75rem 0;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.7rem;
   min-width: max-content;
   text-decoration: none;
 }
 
 .brand-mark {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   flex: 0 0 auto;
 }
 
 .brand-wordmark {
   display: grid;
-  gap: 0.05rem;
+  gap: 0.08rem;
   line-height: 1;
 }
 
 .brand-word {
   display: block;
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 950;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
 .brand-word-red {
@@ -126,7 +126,7 @@ button {
 
 .brand-parent {
   display: block;
-  padding-left: 0.85rem;
+  padding-left: 0.9rem;
   border-left: 1px solid rgba(242, 239, 231, 0.16);
 }
 
@@ -149,7 +149,7 @@ button {
 .nav-links a {
   min-height: 2.5rem;
   padding: 0.62rem 0.78rem;
-  border-radius: 0.4rem;
+  border-radius: 0.35rem;
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 700;
@@ -158,7 +158,7 @@ button {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  background: linear-gradient(90deg, rgba(25, 184, 90, 0.12), rgba(181, 22, 38, 0.08));
+  background: linear-gradient(90deg, rgba(25, 184, 90, 0.13), rgba(181, 22, 38, 0.09));
   color: var(--text);
 }
 
@@ -283,36 +283,39 @@ h3 {
 }
 
 .button-primary {
-  background: var(--accent);
+  border-color: rgba(67, 232, 121, 0.5);
+  background: linear-gradient(180deg, #45e878 0%, var(--signal-green) 100%);
   color: #031008;
+  box-shadow: 0 10px 28px rgba(25, 184, 90, 0.16);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: var(--accent-strong);
+  background: linear-gradient(180deg, #58f087 0%, #1fca64 100%);
+  box-shadow: 0 12px 32px rgba(25, 184, 90, 0.22);
 }
 
 .button-secondary {
-  border-color: rgba(181, 22, 38, 0.48);
-  background: rgba(181, 22, 38, 0.08);
+  border-color: rgba(181, 22, 38, 0.42);
+  background: linear-gradient(180deg, rgba(181, 22, 38, 0.11), rgba(8, 17, 13, 0.54));
   color: var(--text);
 }
 
 .button-secondary:hover,
 .button-secondary:focus-visible {
-  border-color: rgba(25, 184, 90, 0.78);
-  background: rgba(25, 184, 90, 0.08);
+  border-color: rgba(25, 184, 90, 0.66);
+  background: linear-gradient(180deg, rgba(25, 184, 90, 0.11), rgba(8, 17, 13, 0.58));
 }
 
 .hero-panel {
   min-height: 24rem;
   padding: 1.2rem;
-  border: 1px solid var(--green-border);
+  border: 1px solid rgba(25, 184, 90, 0.24);
   border-radius: 0.5rem;
   background:
     linear-gradient(145deg, rgba(11, 21, 16, 0.96), rgba(8, 17, 13, 0.82)),
     repeating-linear-gradient(90deg, transparent 0 12px, rgba(25, 184, 90, 0.045) 12px 13px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
 }
 
 .hero-panel p {
@@ -413,7 +416,7 @@ h3 {
 .rate-card {
   border: 1px solid var(--green-border);
   border-radius: 0.5rem;
-  background: rgba(8, 17, 13, 0.92);
+  background: linear-gradient(180deg, rgba(11, 21, 16, 0.94), rgba(7, 13, 10, 0.92));
 }
 
 .path-card {
@@ -427,7 +430,7 @@ h3 {
 .path-card:hover,
 .path-card:focus-visible {
   border-color: rgba(25, 184, 90, 0.72);
-  background: rgba(11, 21, 16, 0.98);
+  background: linear-gradient(180deg, rgba(13, 27, 19, 0.98), rgba(8, 17, 13, 0.96));
 }
 
 .path-card span {
@@ -596,7 +599,7 @@ h3 {
   border: 1px solid var(--green-border);
   border-radius: 0.5rem;
   background: var(--panel);
-  box-shadow: var(--shadow);
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.34);
 }
 
 .contact-form label {
@@ -785,25 +788,26 @@ h3 {
   }
 
   .brand {
-    gap: 0.6rem;
+    gap: 0.55rem;
   }
 
   .brand-mark {
-    width: 3rem;
-    height: 3rem;
+    width: 2.85rem;
+    height: 2.85rem;
   }
 
   .brand-word {
-    font-size: 0.86rem;
-    letter-spacing: 0.08em;
+    font-size: 0.82rem;
+    letter-spacing: 0.09em;
   }
 
   .brand-parent {
-    padding-left: 0.6rem;
+    padding-left: 0.55rem;
   }
 
   .brand-parent small {
-    max-width: 8.6rem;
+    max-width: 8rem;
+    font-size: 0.68rem;
   }
 
   .nav-links {

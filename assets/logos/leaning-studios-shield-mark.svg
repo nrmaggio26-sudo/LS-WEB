@@ -1,13 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Leaning Studios shield mark</title>
-  <desc id="desc">Simplified 11-sided Leaning Studios LS shield for compact logo use.</desc>
-  <path d="M48 6 70 13 85 29 89 53 79 74 59 88 37 88 17 74 7 53 11 29 26 13Z" fill="#050607"/>
-  <path d="M48 6 26 13 11 29 7 53 17 74 37 88 48 88" fill="none" stroke="#19b85a" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M48 6 70 13 85 29 89 53 79 74 59 88 48 88" fill="none" stroke="#b51626" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M31 26h10v29h20l-9 11H31Z" fill="#19b85a"/>
-  <path d="M58 28h19l-8 9H56c-4 0-7 3-7 7s3 7 7 7h8c9 0 15 6 15 14s-7 13-16 13H42l8-9h14c4 0 7-2 7-6 0-3-3-5-7-5h-8c-9 0-15-6-15-14 0-9 7-16 17-16Z" fill="#b51626"/>
-  <g opacity="0.78">
-    <path d="M22 36h5M22 45h5M22 54h5M76 36h5M76 45h5M76 54h5" stroke="#f2efe7" stroke-width="2" stroke-linecap="round"/>
-    <path d="M23 74h9l2-4 3 8 4-12 4 16 4-14 3 8 4-4 3 4h8l2-4 3 6 3-5 2 3h7" fill="none" stroke="#f2efe7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <title id="title">Leaning Studios refined shield mark</title>
+  <desc id="desc">A refined 11-sided LS shield with split green and red borders, meter bars, and a subtle waveform.</desc>
+  <path d="M48 7 67 12 82 26 88 47 83 66 69 82 52 89 33 86 17 74 8 56 10 35 22 17Z" fill="#050607"/>
+  <path d="M48 7 22 17 10 35 8 56 17 74 33 86 48 88" fill="none" stroke="#19b85a" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 7 67 12 82 26 88 47 83 66 69 82 52 89 48 88" fill="none" stroke="#b51626" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M29 24h11v31h19l-8 11H29Z" fill="#19b85a"/>
+  <path d="M58 24h19l-8 10H58c-4 0-6 2-6 6 0 3 2 5 6 5h7c10 0 16 6 16 15 0 10-7 16-18 16H43l8-10h13c4 0 7-2 7-6 0-3-3-5-7-5h-7c-9 0-15-6-15-15 0-10 6-16 16-16Z" fill="#b51626"/>
+  <g opacity="0.72">
+    <path d="M22 36h4M22 44h4M22 52h4M22 60h4" stroke="#19b85a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M80 36h4M80 44h4M80 52h4M80 60h4" stroke="#b51626" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M25 75h8l2-3 3 7 4-13 4 18 4-15 3 8 3-4 3 4h7l2-4 3 6 3-5 2 3h8" fill="none" stroke="#f2efe7" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

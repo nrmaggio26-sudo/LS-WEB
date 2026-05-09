@@ -1,34 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Leaning Studios 11-sided shield mark</title>
-  <desc id="desc">An 11-sided dark shield with green L, red S, audio meters, and waveform details.</desc>
+  <title id="title">Leaning Studios 11-sided LS shield</title>
+  <desc id="desc">A balanced 11-sided dark tech shield with green L, red S, audio meters, and waveform detail.</desc>
   <defs>
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+    <filter id="refinedGlow" x="-12%" y="-12%" width="124%" height="124%">
+      <feGaussianBlur stdDeviation="0.65" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-  <path d="M48 6 70 13 85 29 89 53 79 74 59 88 37 88 17 74 7 53 11 29 26 13Z" fill="#050607"/>
-  <path d="M48 6 26 13 11 29 7 53 17 74 37 88 48 88" fill="none" stroke="#19b85a" stroke-width="4.5" stroke-linejoin="round"/>
-  <path d="M48 6 70 13 85 29 89 53 79 74 59 88 48 88" fill="none" stroke="#b51626" stroke-width="4.5" stroke-linejoin="round"/>
-  <path d="M31 26h10v29h20l-9 11H31Z" fill="#19b85a" filter="url(#softGlow)"/>
-  <path d="M58 28h19l-8 9H56c-4 0-7 3-7 7s3 7 7 7h8c9 0 15 6 15 14s-7 13-16 13H42l8-9h14c4 0 7-2 7-6 0-3-3-5-7-5h-8c-9 0-15-6-15-14 0-9 7-16 17-16Z" fill="#b51626" filter="url(#softGlow)"/>
-  <g fill="#19b85a" opacity="0.82">
-    <rect x="20" y="32" width="3" height="5" rx="0.7"/>
-    <rect x="20" y="40" width="3" height="8" rx="0.7"/>
-    <rect x="20" y="51" width="3" height="11" rx="0.7"/>
-    <rect x="25" y="35" width="3" height="7" rx="0.7"/>
-    <rect x="25" y="46" width="3" height="15" rx="0.7"/>
+  <path d="M48 7 67 12 82 26 88 47 83 66 69 82 52 89 33 86 17 74 8 56 10 35 22 17Z" fill="#050607"/>
+  <path d="M48 7 22 17 10 35 8 56 17 74 33 86 48 88" fill="none" stroke="#19b85a" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 7 67 12 82 26 88 47 83 66 69 82 52 89 48 88" fill="none" stroke="#b51626" stroke-width="4.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M29 24h11v31h19l-8 11H29Z" fill="#19b85a" filter="url(#refinedGlow)"/>
+  <path d="M58 24h19l-8 10H58c-4 0-6 2-6 6 0 3 2 5 6 5h7c10 0 16 6 16 15 0 10-7 16-18 16H43l8-10h13c4 0 7-2 7-6 0-3-3-5-7-5h-7c-9 0-15-6-15-15 0-10 6-16 16-16Z" fill="#b51626" filter="url(#refinedGlow)"/>
+  <g opacity="0.78">
+    <path d="M22 35h4M22 43h4M22 51h4M22 59h4" stroke="#19b85a" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M80 35h4M80 43h4M80 51h4M80 59h4" stroke="#b51626" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M25 75h8l2-3 3 7 4-13 4 18 4-15 3 8 3-4 3 4h7l2-4 3 6 3-5 2 3h8" fill="none" stroke="#f2efe7" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <g fill="#b51626" opacity="0.82">
-    <rect x="76" y="32" width="3" height="6" rx="0.7"/>
-    <rect x="76" y="42" width="3" height="12" rx="0.7"/>
-    <rect x="76" y="58" width="3" height="7" rx="0.7"/>
-    <rect x="81" y="36" width="3" height="9" rx="0.7"/>
-    <rect x="81" y="49" width="3" height="15" rx="0.7"/>
-  </g>
-  <path d="M21 74h9l2-3 3 6 4-12 4 18 4-16 3 9 4-5 3 5h7" fill="none" stroke="#19b85a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M64 74h5l2-5 3 9 3-7 2 3h8" fill="none" stroke="#b51626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

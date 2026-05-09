@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <path d="M32 4 47 9 57 20 60 36 53 50 40 59 24 59 11 50 4 36 7 20 17 9Z" fill="#050607"/>
-  <path d="M32 4 17 9 7 20 4 36 11 50 24 59 32 59" fill="none" stroke="#19b85a" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M32 4 47 9 57 20 60 36 53 50 40 59 32 59" fill="none" stroke="#b51626" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M21 18h7v20h14l-6 8H21Z" fill="#19b85a"/>
-  <path d="M39 19h13l-6 7h-8c-3 0-5 2-5 5s2 5 5 5h4c7 0 11 4 11 10s-5 10-12 10H27l6-7h9c3 0 5-2 5-4s-2-3-5-3h-5c-6 0-10-4-10-10 0-7 5-13 12-13Z" fill="#b51626"/>
+  <path d="M32 5 45 8 55 18 59 32 56 45 46 55 35 60 22 58 11 50 5 37 6 24 15 12Z" fill="#050607"/>
+  <path d="M32 5 15 12 6 24 5 37 11 50 22 58 32 59" fill="none" stroke="#19b85a" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 5 45 8 55 18 59 32 56 45 46 55 35 60 32 59" fill="none" stroke="#b51626" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 17h8v21h13l-6 8H20Z" fill="#19b85a"/>
+  <path d="M39 17h13l-6 8h-8c-3 0-5 2-5 4 0 3 2 4 5 4h5c7 0 11 5 11 11 0 7-5 11-13 11H28l6-8h8c3 0 5-1 5-4 0-2-2-3-5-3h-5c-7 0-11-4-11-11 0-7 5-12 13-12Z" fill="#b51626"/>
 </svg>
