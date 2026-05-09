@@ -1,15 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 96" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 112" role="img" aria-labelledby="title desc">
   <title id="title">Leaning Studios logo</title>
-  <desc id="desc">Leaning Studios wordmark with a leaning audio-bar monogram.</desc>
-  <rect width="276" height="96" fill="none"/>
-  <g aria-hidden="true">
-    <rect x="4" y="8" width="80" height="80" rx="18" fill="#090c10"/>
-    <path d="M22 66 37 24h12L34 66H22Z" fill="#4ee0b8"/>
-    <path d="M47 66 62 24h8L55 66h-8Z" fill="#f2c96d"/>
-    <path d="M22 73h49" stroke="#f5f7fb" stroke-width="6" stroke-linecap="round"/>
+  <desc id="desc">Leaning Studios wordmark with an 11-sided tech audio LS shield.</desc>
+  <rect width="420" height="112" fill="none"/>
+  <g transform="translate(4 8) scale(1)">
+    <path d="M48 6 70 13 85 29 89 53 79 74 59 88 37 88 17 74 7 53 11 29 26 13Z" fill="#050607"/>
+    <path d="M48 6 26 13 11 29 7 53 17 74 37 88 48 88" fill="none" stroke="#19b85a" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M48 6 70 13 85 29 89 53 79 74 59 88 48 88" fill="none" stroke="#b51626" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M31 26h10v29h20l-9 11H31Z" fill="#19b85a"/>
+    <path d="M58 28h19l-8 9H56c-4 0-7 3-7 7s3 7 7 7h8c9 0 15 6 15 14s-7 13-16 13H42l8-9h14c4 0 7-2 7-6 0-3-3-5-7-5h-8c-9 0-15-6-15-14 0-9 7-16 17-16Z" fill="#b51626"/>
+    <path d="M22 36h5M22 45h5M22 54h5M76 36h5M76 45h5M76 54h5" stroke="#f2efe7" stroke-width="2" stroke-linecap="round" opacity="0.72"/>
+    <path d="M23 74h9l2-4 3 8 4-12 4 16 4-14 3 8 4-4 3 4h8l2-4 3 6 3-5 2 3h7" fill="none" stroke="#f2efe7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
   </g>
-  <g fill="#f5f7fb">
-    <text x="102" y="45" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="0">Leaning</text>
-    <text x="102" y="72" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="0">Studios</text>
-  </g>
+  <text x="118" y="49" font-family="Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="900" letter-spacing="8" fill="#b51626">LEANING</text>
+  <text x="118" y="84" font-family="Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="900" letter-spacing="8" fill="#19b85a">STUDIOS</text>
 </svg>
