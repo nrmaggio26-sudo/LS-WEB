@@ -607,6 +607,7 @@ h3 {
   font-weight: 800;
 }
 
+.netlify-hidden,
 .bot-field {
   display: none;
 }
