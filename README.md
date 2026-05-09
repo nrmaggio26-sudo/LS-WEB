@@ -1,8 +1,8 @@
 # Leaning Studios Website
 
-Version: 0.1.0.0
+Version: 0.1.0.5
 
-Build: Internet-Ready Public Release Candidate
+Build: Netlify Form 404 Submit Fix
 
 Leaning Studios is a static one-page intake website for a Watson, Louisiana recording and artist-development studio under Maggios Productions.
 
@@ -17,6 +17,7 @@ Leaning Studios is a static one-page intake website for a Watson, Louisiana reco
 ## Intake
 
 - Primary on-site form: Netlify form named `leaning-studios-package-intake`
+- Form success path: `/thank-you.html`
 - Optional upload form: https://forms.gle/xwPcAECceSriL2AS9
 
 This repository does not require backend services, payment processing, a booking calendar, or client-side dependencies.
