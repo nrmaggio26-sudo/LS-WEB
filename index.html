@@ -210,32 +210,67 @@
           </p>
         </div>
 
-        <form class="contact-form" name="leaning-studios-contact" method="POST" data-netlify="true" netlify>
-          <input type="hidden" name="form-name" value="leaning-studios-contact">
+        <div class="intake-panel">
+          <p class="intake-notice">
+            This form is for inquiries and project review only. Payment and booking details are handled after review.
+          </p>
 
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+          <form
+            class="contact-form"
+            name="leaning-studios-intake"
+            method="POST"
+            data-netlify="true"
+            netlify
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="leaning-studios-intake">
+            <p class="bot-field">
+              <label for="bot-field">Do not fill this out if you are human</label>
+              <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
+            </p>
 
-          <label for="artist-company">Artist/company</label>
-          <input id="artist-company" name="artist-company" type="text" autocomplete="organization">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="artist-company">Artist / company name</label>
+            <input id="artist-company" name="artist-company" type="text" autocomplete="organization" required>
 
-          <label for="service-needed">Service needed</label>
-          <select id="service-needed" name="service-needed" required>
-            <option value="">Select one</option>
-            <option value="tracking">Tracking</option>
-            <option value="mix-master">Mix/master only</option>
-            <option value="artist-development">Artist development</option>
-            <option value="partner-studio-work">Partner studio work</option>
-          </select>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="phone">Phone optional</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
 
-          <button class="button button-primary" type="submit">Send Project / Contact Leaning Studios</button>
-        </form>
+            <label for="service-needed">Service needed</label>
+            <select id="service-needed" name="service-needed" required>
+              <option value="">Select one</option>
+              <option value="tracking-session">Tracking session</option>
+              <option value="mix-master-only">Mix/master only</option>
+              <option value="artist-development">Artist development</option>
+              <option value="satellite-room-studio-partner-support">Satellite room / studio partner support</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="project-title">Project / song title</label>
+            <input id="project-title" name="project-title" type="text" required>
+
+            <label for="timeline">Timeline / deadline</label>
+            <input id="timeline" name="timeline" type="text" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label class="rights-check" for="rights-consent">
+              <input id="rights-consent" name="rights-consent" type="checkbox" value="confirmed" required>
+              <span>By submitting project details or files, you confirm you have the right to share this material with Leaning Studios for review.</span>
+            </label>
+
+            <button class="button button-primary" type="submit">Send Project / Contact Leaning Studios</button>
+          </form>
+
+          <!-- Replace this href with the Google Form file-upload link before public launch. -->
+          <a class="button button-secondary upload-button" href="#">Upload Project Files</a>
+        </div>
       </section>
     </main>
 

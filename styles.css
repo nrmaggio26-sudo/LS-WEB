@@ -145,12 +145,49 @@ button {
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
   gap: clamp(1.2rem, 4vw, 4rem);
   align-items: center;
   min-height: calc(100svh - 76px);
   padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 6vw, 5rem);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero::before {
+  inset: 0;
+  left: 50%;
+  z-index: -2;
+  width: 100vw;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(90deg, rgba(8, 10, 13, 0.97) 0%, rgba(8, 10, 13, 0.92) 42%, rgba(8, 10, 13, 0.74) 70%, rgba(8, 10, 13, 0.9) 100%),
+    linear-gradient(180deg, rgba(8, 10, 13, 0.18) 0%, var(--bg) 100%),
+    url("assets/images/hero-banner.jpg") center right / cover no-repeat;
+}
+
+.hero::after {
+  right: clamp(0rem, 4vw, 3rem);
+  bottom: 8%;
+  z-index: -1;
+  width: min(36rem, 44vw);
+  height: min(24rem, 34vw);
+  background: url("assets/images/glitch-accent.jpg") center / cover no-repeat;
+  filter: saturate(1.25);
+  mix-blend-mode: screen;
+  opacity: 0.055;
+}
+
+.hero > * {
+  position: relative;
 }
 
 .eyebrow {
@@ -310,6 +347,13 @@ h3 {
   padding-left: max(1rem, calc((100% - 1120px) / 2));
   border-block: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.035);
+}
+
+.quick-path {
+  background:
+    linear-gradient(90deg, rgba(11, 13, 16, 0.96) 0%, rgba(11, 13, 16, 0.88) 58%, rgba(11, 13, 16, 0.95) 100%),
+    linear-gradient(180deg, rgba(78, 224, 184, 0.08), rgba(255, 255, 255, 0.02)),
+    url("assets/images/dark-neon-bg.jpg") right center / cover no-repeat;
 }
 
 .section-heading {
@@ -502,6 +546,21 @@ h3 {
   font-weight: 800;
 }
 
+.intake-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.intake-notice {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(242, 201, 109, 0.38);
+  border-radius: 0.45rem;
+  background: rgba(242, 201, 109, 0.09);
+  color: #f9e6b8;
+  font-weight: 800;
+}
+
 .contact-form {
   display: grid;
   gap: 0.7rem;
@@ -515,6 +574,10 @@ h3 {
 .contact-form label {
   color: var(--text);
   font-weight: 800;
+}
+
+.bot-field {
+  display: none;
 }
 
 .contact-form input,
@@ -533,9 +596,35 @@ h3 {
   resize: vertical;
 }
 
+.rights-check {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  margin-top: 0.35rem;
+  padding: 1rem;
+  border: 1px solid rgba(78, 224, 184, 0.28);
+  border-radius: 0.45rem;
+  background: rgba(78, 224, 184, 0.075);
+}
+
+.rights-check input {
+  width: 1.2rem;
+  min-height: 1.2rem;
+  margin-top: 0.12rem;
+  accent-color: var(--accent);
+}
+
+.rights-check span {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.rights-check input:focus {
   outline: 3px solid rgba(78, 224, 184, 0.32);
   border-color: var(--accent);
 }
@@ -543,6 +632,10 @@ h3 {
 .contact-form button {
   width: 100%;
   margin-top: 0.5rem;
+}
+
+.upload-button {
+  width: 100%;
 }
 
 .site-footer {
