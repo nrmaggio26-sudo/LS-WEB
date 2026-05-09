@@ -607,6 +607,40 @@ h3 {
   font-weight: 800;
 }
 
+.form-section {
+  display: grid;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.form-section + .form-section,
+.package-router + .form-section {
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(242, 239, 231, 0.1);
+}
+
+.form-section legend {
+  margin-bottom: 0.2rem;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.package-disclaimer {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--green-border);
+  border-radius: 0.45rem;
+  background: rgba(25, 184, 90, 0.075);
+  color: var(--text);
+  font-weight: 800;
+}
+
 .netlify-hidden,
 .bot-field {
   display: none;
@@ -626,6 +660,87 @@ h3 {
 
 .contact-form textarea {
   resize: vertical;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.choice-card,
+.option-list label {
+  border: 1px solid var(--green-border);
+  border-radius: 0.45rem;
+  background: rgba(3, 5, 4, 0.72);
+}
+
+.choice-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.65rem;
+  align-items: start;
+  min-height: 7rem;
+  padding: 0.95rem;
+  cursor: pointer;
+}
+
+.choice-card input {
+  grid-row: span 2;
+  margin-top: 0.2rem;
+}
+
+.choice-card span {
+  color: var(--accent-strong);
+  font-weight: 950;
+}
+
+.choice-card strong {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.choice-card:has(input:checked),
+.option-list label:has(input:checked) {
+  border-color: rgba(25, 184, 90, 0.78);
+  background: linear-gradient(180deg, rgba(25, 184, 90, 0.15), rgba(8, 17, 13, 0.82));
+}
+
+.package-router {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.js .package-group {
+  display: none;
+}
+
+.js .package-group.is-active {
+  display: grid;
+}
+
+.option-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.option-list label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.65rem;
+  align-items: start;
+  min-height: 3rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.choice-card input,
+.option-list input {
+  width: 1rem;
+  min-height: 1rem;
+  padding: 0;
+  accent-color: var(--accent);
 }
 
 .rights-check {
@@ -868,6 +983,10 @@ h3 {
 
   .contact-form {
     padding: 1rem;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-footer address {

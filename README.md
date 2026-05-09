@@ -16,7 +16,7 @@ Leaning Studios is a static one-page intake website for a Watson, Louisiana reco
 
 ## Intake
 
-- Primary on-site form: Netlify form named `leaning-studios-intake`
-- Upload form: https://forms.gle/xwPcAECceSriL2AS9
+- Primary on-site form: Netlify form named `leaning-studios-package-intake`
+- Optional upload form: https://forms.gle/xwPcAECceSriL2AS9
 
 This repository does not require backend services, payment processing, a booking calendar, or client-side dependencies.
