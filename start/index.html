@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Start Your Project | Leaning Studios</title>
+    <meta
+      name="description"
+      content="Start a Leaning Studios recording, mixing, or mastering project for solo artists and bands in the Watson and Baton Rouge area."
+    >
+    <link rel="canonical" href="https://leaningstudios.com/start/">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      .campaign-page {
+        background:
+          radial-gradient(circle at 16% 8%, rgba(25, 184, 90, 0.16), transparent 28rem),
+          radial-gradient(circle at 88% 5%, rgba(181, 22, 38, 0.14), transparent 30rem),
+          linear-gradient(180deg, #040505 0%, #050607 44%, #070b09 100%);
+      }
+
+      .campaign-section,
+      .campaign-footer {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .campaign-hero {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+        gap: clamp(1.5rem, 5vw, 4rem);
+        align-items: center;
+        min-height: calc(100svh - 76px);
+        padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 6vw, 5rem);
+      }
+
+      .campaign-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: 50%;
+        z-index: -2;
+        width: 100vw;
+        transform: translateX(-50%);
+        background:
+          linear-gradient(90deg, rgba(5, 6, 7, 0.98) 0%, rgba(5, 6, 7, 0.92) 48%, rgba(5, 6, 7, 0.76) 100%),
+          url("/assets/images/hero-banner.jpg") center right / cover no-repeat;
+      }
+
+      .campaign-hero::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+        z-index: -1;
+        width: min(38rem, 48vw);
+        height: min(24rem, 34vw);
+        background: url("/assets/images/glitch-accent.jpg") center / cover no-repeat;
+        mix-blend-mode: screen;
+        opacity: 0.06;
+        pointer-events: none;
+      }
+
+      .campaign-hero h1 {
+        max-width: 11ch;
+        font-size: clamp(3.3rem, 8vw, 6.9rem);
+      }
+
+      .campaign-hero-copy {
+        max-width: 42rem;
+        margin: 1.25rem 0 0;
+        color: var(--text);
+        font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+        font-weight: 850;
+      }
+
+      .campaign-hero-subcopy {
+        max-width: 43rem;
+        margin: 1rem 0 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .price-note {
+        margin: 1rem 0 0;
+        color: var(--accent-strong);
+        font-weight: 900;
+      }
+
+      .campaign-card {
+        border: 1px solid var(--green-border);
+        border-radius: 0.5rem;
+        background: linear-gradient(180deg, rgba(11, 21, 16, 0.94), rgba(7, 13, 10, 0.92));
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      }
+
+      .hero-side-card {
+        padding: 1.2rem;
+      }
+
+      .hero-side-card strong {
+        display: block;
+        color: var(--text);
+        font-size: 1.25rem;
+        line-height: 1.1;
+      }
+
+      .hero-side-card p {
+        margin: 0.85rem 0 0;
+        color: var(--muted);
+      }
+
+      .campaign-section {
+        padding: clamp(3rem, 8vw, 6rem) 0;
+        scroll-margin-top: 6rem;
+      }
+
+      .campaign-band {
+        width: 100%;
+        max-width: none;
+        padding-right: max(1rem, calc((100% - 1120px) / 2));
+        padding-left: max(1rem, calc((100% - 1120px) / 2));
+        border-block: 1px solid rgba(25, 184, 90, 0.12);
+        background:
+          linear-gradient(90deg, rgba(5, 6, 7, 0.97), rgba(8, 17, 13, 0.78)),
+          url("/assets/images/dark-neon-bg.jpg") right center / cover no-repeat;
+      }
+
+      .lane-grid,
+      .included-grid,
+      .download-grid,
+      .faq-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .lane-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .included-grid,
+      .download-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .lane-card,
+      .included-card,
+      .faq-card {
+        padding: 1.1rem;
+      }
+
+      .lane-card p,
+      .included-card p,
+      .faq-card p {
+        color: var(--muted);
+      }
+
+      .package-tables {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .package-table-wrap {
+        overflow-x: auto;
+        padding: 1rem;
+      }
+
+      .package-table-wrap h3 {
+        margin-bottom: 0.85rem;
+      }
+
+      .package-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 28rem;
+      }
+
+      .package-table th,
+      .package-table td {
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(242, 239, 231, 0.1);
+        text-align: left;
+      }
+
+      .package-table th {
+        color: var(--accent-strong);
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .package-table td {
+        color: var(--text);
+        font-weight: 750;
+      }
+
+      .table-note,
+      .prep-copy {
+        max-width: 56rem;
+        color: var(--muted);
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .process-steps li {
+        min-height: 11rem;
+        padding: 1rem;
+        border-left: 2px solid var(--accent);
+        background: rgba(8, 17, 13, 0.72);
+      }
+
+      .process-steps span {
+        display: block;
+        color: var(--muted);
+        font-weight: 950;
+      }
+
+      .process-steps strong {
+        display: block;
+        margin-top: 1.5rem;
+        color: var(--text);
+        font-size: 1.15rem;
+      }
+
+      .process-steps p {
+        color: var(--muted);
+      }
+
+      .prep-list {
+        display: grid;
+        gap: 0.65rem;
+        margin: 1.25rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .prep-list li {
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--green-border);
+        border-radius: 0.45rem;
+        background: rgba(8, 17, 13, 0.74);
+        font-weight: 800;
+      }
+
+      .download-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .download-grid .button {
+        min-height: 3.1rem;
+      }
+
+      .campaign-form {
+        display: grid;
+        gap: 0.8rem;
+        max-width: 760px;
+        padding: 1.2rem;
+        border: 1px solid var(--green-border);
+        border-radius: 0.5rem;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .campaign-form label {
+        color: var(--text);
+        font-weight: 800;
+      }
+
+      .campaign-form input,
+      .campaign-form select,
+      .campaign-form textarea {
+        width: 100%;
+        min-height: 3.1rem;
+        padding: 0.78rem 0.85rem;
+        border: 1px solid var(--line);
+        border-radius: 0.35rem;
+        background: #030504;
+        color: var(--text);
+      }
+
+      .campaign-form textarea {
+        resize: vertical;
+      }
+
+      .faq-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .campaign-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 2rem 0 4rem;
+        border-top: 1px solid rgba(25, 184, 90, 0.14);
+        color: var(--muted);
+      }
+
+      .campaign-footer strong,
+      .campaign-footer span {
+        display: block;
+      }
+
+      .campaign-footer strong {
+        color: var(--text);
+      }
+
+      .campaign-footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .campaign-footer a {
+        color: var(--accent-strong);
+        font-weight: 850;
+      }
+
+      @media (max-width: 900px) {
+        .campaign-hero,
+        .package-tables {
+          grid-template-columns: 1fr;
+        }
+
+        .included-grid,
+        .download-grid,
+        .process-steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 520px) {
+        .campaign-section {
+          width: min(100% - 1rem, 1120px);
+        }
+
+        .campaign-hero {
+          min-height: auto;
+          width: min(100% - 1rem, 1120px);
+        }
+
+        .campaign-hero h1 {
+          font-size: clamp(3rem, 18vw, 4.5rem);
+        }
+
+        .hero-actions .button,
+        .lane-card .button {
+          width: 100%;
+        }
+
+        .lane-grid,
+        .included-grid,
+        .download-grid,
+        .process-steps,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .campaign-form {
+          padding: 1rem;
+        }
+
+        .campaign-footer {
+          flex-direction: column;
+          width: min(100% - 1rem, 1120px);
+        }
+      }
+    </style>
+  </head>
+  <body class="campaign-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Leaning Studios home">
+          <img
+            class="brand-mark"
+            src="/assets/logos/leaning-studios-shield-mark.svg"
+            alt="Leaning Studios"
+            width="54"
+            height="54"
+          >
+          <span class="brand-wordmark" aria-hidden="true">
+            <span class="brand-word brand-word-red">LEANING</span>
+            <span class="brand-word brand-word-green">STUDIOS</span>
+          </span>
+          <span class="brand-parent">
+            <small>A Maggios Productions company</small>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#packages">Packages</a>
+          <a href="#included">Included</a>
+          <a href="#downloads">Info Sheets</a>
+          <a href="#start-project">Start</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="campaign-hero campaign-section" aria-labelledby="start-hero-title">
+        <div>
+          <p class="eyebrow">MCD 0.0.0.1 — Leaning Studios Customer Booking Campaign</p>
+          <h1 id="start-hero-title">Record. Finish. Release.</h1>
+          <p class="campaign-hero-copy">
+            Simple recording packages for solo artists and bands ready to turn songs into finished projects.
+          </p>
+          <p class="campaign-hero-subcopy">
+            Leaning Studios is a private, appointment-based recording setup for independent artists, bands, songwriters, and creators who want a clear path from idea to finished recording.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#start-project">Start Your Project</a>
+            <a class="button button-secondary" href="#packages">View Packages</a>
+          </div>
+          <p class="price-note">Solo packages start at $120. Band packages start at $140.</p>
+        </div>
+        <aside class="campaign-card hero-side-card" aria-label="Campaign focus">
+          <strong>Private sessions. Clear packages. Finished files.</strong>
+          <p>Bring the songs, references, files, and notes. Leaning Studios helps you move from prepared idea to recorded project.</p>
+        </aside>
+      </section>
+
+      <section class="campaign-section campaign-band" aria-labelledby="lanes-title">
+        <div class="section-heading">
+          <p class="eyebrow">Choose Your Lane</p>
+          <h2 id="lanes-title">Start with the project type</h2>
+        </div>
+        <div class="lane-grid">
+          <article class="campaign-card lane-card">
+            <h3>Solo Artists</h3>
+            <p>For rappers, singers, songwriters, vocalists, and independent artists recording over beats or instrumentals.</p>
+            <a class="button button-secondary" href="#solo-packages">View Solo Packages</a>
+          </article>
+          <article class="campaign-card lane-card">
+            <h3>Bands</h3>
+            <p>For bands, groups, duos, and instrument-based projects that need more setup, coordination, and mix attention.</p>
+            <a class="button button-secondary" href="#band-packages">View Band Packages</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="campaign-section" id="packages" aria-labelledby="packages-title">
+        <div class="section-heading">
+          <p class="eyebrow">Package Overview</p>
+          <h2 id="packages-title">Pick by song count</h2>
+        </div>
+        <div class="package-tables">
+          <article class="campaign-card package-table-wrap" id="solo-packages">
+            <h3>Solo Artist Packages</h3>
+            <table class="package-table">
+              <thead>
+                <tr>
+                  <th>Package</th>
+                  <th>Song Count</th>
+                  <th>Starting Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Solo Demo</td><td>1–3 songs</td><td>from $120</td></tr>
+                <tr><td>Solo EP</td><td>4–7 songs</td><td>from $320</td></tr>
+                <tr><td>Solo Album</td><td>8–13 songs</td><td>from $590</td></tr>
+                <tr><td>Solo LP</td><td>14–18 songs</td><td>from $890</td></tr>
+                <tr><td>Solo Special Project</td><td>20+ songs</td><td>from $1,250</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="campaign-card package-table-wrap" id="band-packages">
+            <h3>Band Packages</h3>
+            <table class="package-table">
+              <thead>
+                <tr>
+                  <th>Package</th>
+                  <th>Song Count</th>
+                  <th>Starting Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Band Demo</td><td>1–3 songs</td><td>from $140</td></tr>
+                <tr><td>Band EP</td><td>4–7 songs</td><td>from $370</td></tr>
+                <tr><td>Band Album</td><td>8–13 songs</td><td>from $680</td></tr>
+                <tr><td>Band LP</td><td>14–18 songs</td><td>from $1,025</td></tr>
+                <tr><td>Band Special Project</td><td>20+ songs</td><td>from $1,440</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <p class="table-note">
+          All packages include scheduled recording time and basic mix/master finishing. Extra time is $25/hr when available.
+          Larger projects and special projects are reviewed before final scheduling.
+        </p>
+      </section>
+
+      <section class="campaign-section campaign-band" id="included" aria-labelledby="included-title">
+        <div class="section-heading">
+          <p class="eyebrow">What’s Included</p>
+          <h2 id="included-title">Built for a clean session day</h2>
+        </div>
+        <div class="included-grid">
+          <article class="campaign-card included-card">
+            <h3>Recording Time</h3>
+            <p>Strict scheduled recording blocks for the package you choose.</p>
+          </article>
+          <article class="campaign-card included-card">
+            <h3>Basic Mix/Master</h3>
+            <p>A basic finish is included. Detailed upgrades are available after review.</p>
+          </article>
+          <article class="campaign-card included-card">
+            <h3>File Organization</h3>
+            <p>Session files, rough bounces, and exports are organized for the project.</p>
+          </article>
+          <article class="campaign-card included-card">
+            <h3>Clear Next Step</h3>
+            <p>You leave knowing where the project stands and what should happen next.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="campaign-section" aria-labelledby="works-title">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2 id="works-title">Five simple steps</h2>
+        </div>
+        <ol class="process-steps">
+          <li><span>1.</span><strong>Choose</strong><p>Pick the package type that matches your song count.</p></li>
+          <li><span>2.</span><strong>Send</strong><p>Submit your project info, files, references, and timeline.</p></li>
+          <li><span>3.</span><strong>Confirm</strong><p>Finalize the schedule, scope, and expectations.</p></li>
+          <li><span>4.</span><strong>Record</strong><p>Arrive prepared and use the scheduled session block.</p></li>
+          <li><span>5.</span><strong>Finish</strong><p>Receive finished files or next-step direction for the project.</p></li>
+        </ol>
+      </section>
+
+      <section class="campaign-section campaign-band" aria-labelledby="prepared-title">
+        <div class="section-heading">
+          <p class="eyebrow">Before You Book / Come Prepared</p>
+          <h2 id="prepared-title">Session time is strict</h2>
+        </div>
+        <p class="prep-copy">
+          Session time is strict. Please have lyrics, beats, files, references, instruments, and project notes ready before the session.
+        </p>
+        <ul class="prep-list">
+          <li>Late arrival does not extend the session.</li>
+          <li>Writing during the session counts as session time.</li>
+          <li>Beat searching or file downloading counts as session time.</li>
+          <li>Extra time is $25/hr when available.</li>
+          <li>Heavy edits or complex revisions may cost extra.</li>
+          <li>Larger projects are reviewed before final scheduling.</li>
+        </ul>
+      </section>
+
+      <section class="campaign-section" id="downloads" aria-labelledby="downloads-title">
+        <div class="section-heading">
+          <p class="eyebrow">Package Info Sheets</p>
+          <h2 id="downloads-title">Download the details</h2>
+        </div>
+        <div class="download-grid">
+          <a class="button button-secondary" href="/downloads/leaning-studios-customer-package-info-sheets-booklet.pdf">Full Booklet</a>
+          <a class="button button-secondary" href="/downloads/solo-demo-package-sheet.pdf">Solo Demo</a>
+          <a class="button button-secondary" href="/downloads/solo-ep-package-sheet.pdf">Solo EP</a>
+          <a class="button button-secondary" href="/downloads/solo-album-package-sheet.pdf">Solo Album</a>
+          <a class="button button-secondary" href="/downloads/solo-lp-package-sheet.pdf">Solo LP</a>
+          <a class="button button-secondary" href="/downloads/solo-special-project-package-sheet.pdf">Solo Special</a>
+          <a class="button button-secondary" href="/downloads/band-demo-package-sheet.pdf">Band Demo</a>
+          <a class="button button-secondary" href="/downloads/band-ep-package-sheet.pdf">Band EP</a>
+          <a class="button button-secondary" href="/downloads/band-album-package-sheet.pdf">Band Album</a>
+          <a class="button button-secondary" href="/downloads/band-lp-package-sheet.pdf">Band LP</a>
+          <a class="button button-secondary" href="/downloads/band-special-project-package-sheet.pdf">Band Special</a>
+        </div>
+      </section>
+
+      <section class="campaign-section campaign-band" id="start-project" aria-labelledby="form-title">
+        <div class="section-heading">
+          <p class="eyebrow">Start Your Project</p>
+          <h2 id="form-title">Send the project details</h2>
+        </div>
+        <form class="campaign-form" name="leaning-studios-start-project" method="POST" action="/thank-you.html" data-netlify="true">
+          <input type="hidden" name="form-name" value="leaning-studios-start-project">
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="artist-band-name">Artist / Band Name</label>
+          <input id="artist-band-name" name="artist-band-name" type="text" autocomplete="organization" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+          <label for="project-type">Project Type</label>
+          <select id="project-type" name="project-type" required>
+            <option value="">Select one</option>
+            <option value="solo-artist">Solo Artist</option>
+            <option value="band">Band</option>
+            <option value="not-sure-yet">Not sure yet</option>
+          </select>
+
+          <label for="package-interest">Package Interest</label>
+          <select id="package-interest" name="package-interest" required>
+            <option value="">Select one</option>
+            <option value="demo-1-3">Demo 1–3</option>
+            <option value="ep-4-7">EP 4–7</option>
+            <option value="album-8-13">Album 8–13</option>
+            <option value="lp-14-18">LP 14–18</option>
+            <option value="special-project-20-plus">Special Project 20+</option>
+            <option value="not-sure-yet">Not sure yet</option>
+          </select>
+
+          <label for="number-of-songs">Number of Songs</label>
+          <input id="number-of-songs" name="number-of-songs" type="text" required>
+
+          <label for="need">What do you need?</label>
+          <select id="need" name="need" required>
+            <option value="">Select one</option>
+            <option value="recording-basic-mix-master">Recording + basic mix/master</option>
+            <option value="recording-only">Recording only</option>
+            <option value="mix-master-only">Mix/master only</option>
+            <option value="not-sure-yet">Not sure yet</option>
+          </select>
+
+          <label for="instagram-social">Instagram / Social Link</label>
+          <input id="instagram-social" name="instagram-social" type="text">
+
+          <label for="preferred-timeline">Preferred Timeline</label>
+          <input id="preferred-timeline" name="preferred-timeline" type="text" required>
+
+          <label for="music-file-link">Music / File Link</label>
+          <input id="music-file-link" name="music-file-link" type="text">
+
+          <label for="project-notes">Project Notes</label>
+          <textarea id="project-notes" name="project-notes" rows="5" required></textarea>
+
+          <button class="button button-primary" type="submit">Send Project</button>
+        </form>
+      </section>
+
+      <section class="campaign-section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Common questions</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="campaign-card faq-card">
+            <h3>Is this a commercial studio?</h3>
+            <p>Leaning Studios is currently a private, appointment-based recording setup for independent artists, bands, and creators.</p>
+          </article>
+          <article class="campaign-card faq-card">
+            <h3>Do packages include mix/master?</h3>
+            <p>Customer packages include basic mix/master finishing. More detailed editing, advanced vocal production, or heavy revisions may require an upgrade.</p>
+          </article>
+          <article class="campaign-card faq-card">
+            <h3>What if I do not know which package I need?</h3>
+            <p>Start the form and choose “Not sure yet.” Leaning Studios will help route the project based on song count and what you need.</p>
+          </article>
+          <article class="campaign-card faq-card">
+            <h3>Do bands cost more?</h3>
+            <p>Yes. Band packages start higher because setup, coordination, file handling, and mix complexity are usually greater.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="campaign-footer">
+      <div>
+        <strong>Leaning Studios</strong>
+        <span>Recording • Mixing • Mastering</span>
+        <span>Watson / Baton Rouge Area</span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#start-project">Start Your Project</a>
+        <a href="#packages">View Packages</a>
+      </nav>
+    </footer>
+  </body>
+</html>
