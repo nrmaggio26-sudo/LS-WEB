@@ -1,5 +1,34 @@
 document.documentElement.classList.add("js");
 
+const heroCarousel = document.querySelector("[data-hero-carousel]");
+
+if (heroCarousel) {
+  const slides = Array.from(heroCarousel.querySelectorAll("[data-carousel-slide]"));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+  if (activeIndex < 0) {
+    activeIndex = 0;
+    slides[0]?.classList.add("is-active");
+  }
+
+  slides.forEach((slide, index) => {
+    slide.setAttribute("aria-hidden", String(index !== activeIndex));
+  });
+
+  if (!reducedMotion && slides.length > 1) {
+    window.setInterval(() => {
+      const previousIndex = activeIndex;
+      activeIndex = (activeIndex + 1) % slides.length;
+
+      slides[previousIndex].classList.remove("is-active");
+      slides[previousIndex].setAttribute("aria-hidden", "true");
+      slides[activeIndex].classList.add("is-active");
+      slides[activeIndex].setAttribute("aria-hidden", "false");
+    }, 8000);
+  }
+}
+
 const packageRouterForm = document.querySelector(".package-router-form");
 
 if (packageRouterForm) {
