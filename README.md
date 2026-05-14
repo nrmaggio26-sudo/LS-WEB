@@ -1,8 +1,8 @@
 # Leaning Studios Website
 
-Version: 0.1.0.10
+Version: 0.1.0.11
 
-Build: Embedded Featured Artist Videos
+Build: Studio Photo Integration
 
 Leaning Studios is a static one-page intake website for a Watson, Louisiana recording, project-finishing, artist-development, and Audio Support studio under Maggios Productions.
 
@@ -23,6 +23,7 @@ Leaning Studios is a static one-page intake website for a Watson, Louisiana reco
 - Studio Support page: `studio-support.html`
 - Public Studio Support packages: Quick Help + Setup, Project Support, Partner Support
 - Featured Work uses four lazy-loaded YouTube embeds plus outbound YouTube links; Community Feedback uses outbound Facebook link cards only
+- Studio photos use optimized web copies in `assets/images/studio/`; original photo sources are preserved under `assets/source/studio-photos/`
 
 ## Pricing Visibility
 
