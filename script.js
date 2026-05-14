@@ -6,6 +6,8 @@ if (packageRouterForm) {
   const laneOptions = packageRouterForm.querySelectorAll("[data-lane-option]");
   const packageGroups = packageRouterForm.querySelectorAll("[data-package-group]");
   const packageChoices = packageRouterForm.querySelectorAll('input[name="package-choice"]');
+  const audioSupportFields = packageRouterForm.querySelector("[data-audio-support-fields]");
+  const audioSupportInputs = audioSupportFields?.querySelectorAll("[data-required-when-active]") ?? [];
 
   function updatePackageGroups(selectedLane) {
     packageGroups.forEach((group) => {
@@ -26,6 +28,13 @@ if (packageRouterForm) {
     if (firstActiveChoice) {
       firstActiveChoice.required = true;
     }
+
+    const isAudioSupport = selectedLane === "audio-support";
+    audioSupportFields?.classList.toggle("is-active", isAudioSupport);
+    audioSupportFields?.setAttribute("aria-hidden", String(!isAudioSupport));
+    audioSupportInputs.forEach((input) => {
+      input.required = isAudioSupport;
+    });
   }
 
   laneOptions.forEach((option) => {
@@ -38,5 +47,7 @@ if (packageRouterForm) {
 
   if (selectedLane) {
     updatePackageGroups(selectedLane.dataset.laneOption);
+  } else {
+    updatePackageGroups("");
   }
 }

@@ -1,10 +1,10 @@
 # Leaning Studios Website
 
-Version: 0.1.0.6
+Version: 0.1.0.7
 
-Build: Public Pricing Visibility Cleanup
+Build: Four Pillar Service Lane Expansion
 
-Leaning Studios is a static one-page intake website for a Watson, Louisiana recording and artist-development studio under Maggios Productions.
+Leaning Studios is a static one-page intake website for a Watson, Louisiana recording, project-finishing, artist-development, and Audio Support studio under Maggios Productions.
 
 ## Deployment
 
@@ -19,9 +19,10 @@ Leaning Studios is a static one-page intake website for a Watson, Louisiana reco
 - Primary on-site form: Netlify form named `leaning-studios-package-intake`
 - Form success path: `/thank-you.html`
 - Optional upload form: https://forms.gle/xwPcAECceSriL2AS9
+- Primary service lanes: Record, Finish, Build, Audio Support, plus Not sure yet routing
 
 ## Pricing Visibility
 
-Public site hides detailed package pricing. Internal pricing/package chart is maintained separately.
+Public site hides detailed package and Audio Support pricing. Internal pricing/package chart is maintained separately.
 
 This repository does not require backend services, payment processing, a booking calendar, or client-side dependencies.
