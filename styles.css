@@ -500,6 +500,17 @@ h3 {
   margin-top: 0.25rem;
 }
 
+.pillar-actions {
+  display: grid;
+  gap: 0.7rem;
+  align-self: end;
+}
+
+.text-link {
+  color: var(--accent-strong);
+  font-weight: 850;
+}
+
 .rate-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -875,6 +886,156 @@ h3 {
   font-size: 1.12rem;
 }
 
+.support-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  width: min(1120px, calc(100% - 2rem));
+  min-height: calc(72svh - 76px);
+  margin: 0 auto;
+  padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+}
+
+.support-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(90deg, rgba(5, 6, 7, 0.98) 0%, rgba(5, 6, 7, 0.9) 58%, rgba(5, 6, 7, 0.96) 100%),
+    radial-gradient(circle at 82% 28%, rgba(181, 22, 38, 0.16), transparent 22rem),
+    radial-gradient(circle at 18% 12%, rgba(25, 184, 90, 0.18), transparent 25rem),
+    url("assets/images/dark-neon-bg.jpg") center right / cover no-repeat;
+}
+
+.support-rule,
+.support-package-card {
+  border: 1px solid var(--green-border);
+  border-radius: 0.5rem;
+  background: linear-gradient(180deg, rgba(11, 21, 16, 0.95), rgba(7, 13, 10, 0.92));
+  box-shadow: var(--shadow);
+}
+
+.support-rule {
+  padding: 1.2rem;
+  border-color: var(--red-border);
+}
+
+.support-rule strong {
+  display: block;
+  color: var(--signal-red);
+  font-size: 0.86rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.support-rule p {
+  margin: 0.85rem 0 0;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.support-intro .section-heading p:not(.eyebrow),
+.support-cta .section-heading p:not(.eyebrow) {
+  max-width: 58rem;
+}
+
+.support-package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.support-package-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  padding: 1.2rem;
+  border-top: 2px solid var(--accent);
+}
+
+.support-package-card:nth-child(2) {
+  border-top-color: var(--signal-red);
+}
+
+.package-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.support-price {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 1.35rem;
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.support-package-card:nth-child(2) .support-price {
+  color: #ff5a68;
+}
+
+.support-package-card p:not(.package-kicker):not(.support-price) {
+  margin: 0;
+  color: var(--muted);
+}
+
+.support-package-card ul {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.support-package-card li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.support-package-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.support-note {
+  padding: 0.85rem;
+  border: 1px solid var(--red-border);
+  border-radius: 0.4rem;
+  background: rgba(181, 22, 38, 0.08);
+  color: var(--text) !important;
+  font-weight: 800;
+}
+
+.support-cta {
+  display: grid;
+  gap: 1rem;
+}
+
+.support-cta .button {
+  justify-self: start;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -913,6 +1074,12 @@ h3 {
   font-weight: 800;
 }
 
+.footer-links {
+  display: grid;
+  gap: 0.35rem;
+  text-align: right;
+}
+
 .mobile-sticky {
   position: fixed;
   right: 1rem;
@@ -941,11 +1108,13 @@ h3 {
   }
 
   .hero,
+  .support-hero,
   .contact-section {
     grid-template-columns: 1fr;
   }
 
-  .hero {
+  .hero,
+  .support-hero {
     min-height: auto;
   }
 
@@ -961,6 +1130,7 @@ h3 {
 
   .path-grid,
   .rate-grid,
+  .support-package-grid,
   .support-list {
     grid-template-columns: 1fr;
   }
@@ -1026,6 +1196,7 @@ h3 {
   }
 
   .hero,
+  .support-hero,
   .content-section,
   .contact-section,
   .site-footer {
@@ -1074,6 +1245,10 @@ h3 {
   }
 
   .site-footer address {
+    text-align: left;
+  }
+
+  .footer-links {
     text-align: left;
   }
 

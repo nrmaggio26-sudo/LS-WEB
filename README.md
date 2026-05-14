@@ -1,8 +1,8 @@
 # Leaning Studios Website
 
-Version: 0.1.0.7
+Version: 0.1.0.8
 
-Build: Four Pillar Service Lane Expansion
+Build: Studio Support Page + Support Package Alignment
 
 Leaning Studios is a static one-page intake website for a Watson, Louisiana recording, project-finishing, artist-development, and Audio Support studio under Maggios Productions.
 
@@ -20,9 +20,11 @@ Leaning Studios is a static one-page intake website for a Watson, Louisiana reco
 - Form success path: `/thank-you.html`
 - Optional upload form: https://forms.gle/xwPcAECceSriL2AS9
 - Primary service lanes: Record, Finish, Build, Audio Support, plus Not sure yet routing
+- Studio Support page: `studio-support.html`
+- Public Studio Support packages: Quick Help + Setup, Project Support, Partner Support
 
 ## Pricing Visibility
 
-Public site hides detailed package and Audio Support pricing. Internal pricing/package chart is maintained separately.
+Public site hides detailed music package pricing. Studio Support exposes only the approved public support pricing anchors and keeps the old five-package support system private.
 
 This repository does not require backend services, payment processing, a booking calendar, or client-side dependencies.
