@@ -848,11 +848,6 @@ h3 {
   font-weight: 800;
 }
 
-.netlify-hidden,
-.bot-field {
-  display: none;
-}
-
 .contact-form input,
 .contact-form select,
 .contact-form textarea {

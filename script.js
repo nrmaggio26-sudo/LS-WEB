@@ -1,5 +1,23 @@
 document.documentElement.classList.add("js");
 
+const mailtoForms = document.querySelectorAll("[data-mailto-form]");
+
+mailtoForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const body = Array.from(formData.entries())
+      .filter(([, value]) => String(value).trim())
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n");
+    const subject = form.dataset.mailtoSubject || "Leaning Studios inquiry";
+    const mailtoUrl = `mailto:maggiosproductions@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
+  });
+});
+
 const heroCarousel = document.querySelector("[data-hero-carousel]");
 
 if (heroCarousel) {

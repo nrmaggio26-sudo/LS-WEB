@@ -1,29 +1,53 @@
 # Leaning Studios Website
 
-Version: 0.1.0.12
+Current accepted website build: `0.1.0.12`
 
-Build: Hero Studio Photo Carousel
+Migration prep build: `0.1.0.13-prehost` - GitHub Pages Hosting Migration Prep
 
-Leaning Studios is a static one-page intake website for a Watson, Louisiana recording, project-finishing, artist-development, and Audio Support studio under Maggios Productions.
+Local project path: `/Users/qamac/Documents/Maggios Productions/LSwebsite`
 
-## Deployment
+Leaning Studios is a static website for a Watson, Louisiana recording, project-finishing, artist-development, and Audio Support studio under Maggios Productions.
 
-- Deploy target: Netlify
-- Public domain: https://leaningstudios.com/
+## Hosting
+
+- Hosting target: GitHub Pages
+- Public domain: `https://leaningstudios.com/`
+- Pages source: branch `main`, folder `/root`
 - Build command: none
-- Publish directory: `.`
+- Publish root: repository root
 - Main file: `index.html`
+- Custom-domain file: `CNAME`
+- GitHub Pages ignores Netlify-style `_headers`; keep that file only as legacy reference unless headers are moved to another hosting layer later.
+
+## GitHub Pages Deployment
+
+1. Push the accepted `main` branch to GitHub.
+2. In GitHub, open `Settings` -> `Pages`.
+3. Set `Source` to `Deploy from a branch`.
+4. Set `Branch` to `main` and folder to `/root`.
+5. Set the custom domain to `leaningstudios.com`.
+6. After DNS is pointed correctly and the certificate becomes available, enable `Enforce HTTPS`.
+
+## Local Preview
+
+```bash
+cd "/Users/qamac/Documents/Maggios Productions/LSwebsite"
+python3 -m http.server 5500
+```
+
+Then open `http://localhost:5500`.
 
 ## Intake
 
-- Primary on-site form: Netlify form named `leaning-studios-package-intake`
-- Form success path: `/thank-you.html`
-- Optional upload form: https://forms.gle/xwPcAECceSriL2AS9
+- GitHub Pages serves static files only; Netlify Forms do not run there.
+- Public forms currently use a mailto fallback to `maggiosproductions@gmail.com` so submissions do not disappear into a dead Netlify endpoint.
+- Optional file upload form: `https://forms.gle/xwPcAECceSriL2AS9`
+- Preserved thank-you page: `/thank-you.html`
 - Primary service lanes: Record, Finish, Build, Audio Support, plus Not sure yet routing
 - Studio Support page: `studio-support.html`
 - Public Studio Support packages: Quick Help + Setup, Project Support, Partner Support
-- Featured Work uses four lazy-loaded YouTube embeds plus outbound YouTube links; Community Feedback uses outbound Facebook link cards only
-- Studio photos use optimized web copies in `assets/images/studio/`; original photo sources are preserved under `assets/source/studio-photos/`
+- Featured Work uses four lazy-loaded YouTube embeds plus outbound YouTube links; Community Feedback uses outbound Facebook link cards only.
+- Studio photos use optimized web copies in `assets/images/studio/`; original photo sources are preserved under `assets/source/studio-photos/`.
 - The homepage hero card uses a lightweight six-photo carousel; the Studio Support page keeps its smaller support photo accents.
 
 ## Pricing Visibility

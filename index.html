@@ -451,7 +451,7 @@
           <h2 id="contact-title">Tell us what you need to make</h2>
           <p>
             Choose the lane closest to your project, send the details, and Leaning Studios will
-            route the inquiry from there. If the form is unavailable, email
+            route the inquiry from there. Submitting opens a prepared email to
             <a href="mailto:maggiosproductions@gmail.com">maggiosproductions@gmail.com</a>.
           </p>
         </div>
@@ -467,18 +467,12 @@
           <form
             class="contact-form package-router-form"
             name="leaning-studios-package-intake"
-            method="POST"
-            action="/thank-you.html"
-            data-netlify="true"
-            netlify
-            netlify-honeypot="bot-field"
+            method="GET"
+            action="mailto:maggiosproductions@gmail.com"
+            enctype="text/plain"
+            data-mailto-form
+            data-mailto-subject="Leaning Studios project inquiry"
           >
-            <input type="hidden" name="form-name" value="leaning-studios-package-intake">
-            <p class="bot-field netlify-hidden" aria-hidden="true">
-              <label for="bot-field">Do not fill this out if you are human</label>
-              <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
-            </p>
-
             <fieldset class="form-section lane-selector">
               <legend>Choose your lane</legend>
               <div class="choice-grid">
@@ -742,6 +736,6 @@
     </footer>
 
     <a class="mobile-sticky" href="#contact">Send Project / Contact</a>
-    <script src="script.js?v=0.1.0.12" defer></script>
+    <script src="script.js?v=0.1.0.13-prehost" defer></script>
   </body>
 </html>
