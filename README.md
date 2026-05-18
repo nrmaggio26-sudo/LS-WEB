@@ -40,7 +40,8 @@ Then open `http://localhost:5500`.
 ## Intake
 
 - GitHub Pages serves static files only; Netlify Forms do not run there.
-- Public forms currently use a mailto fallback to `maggiosproductions@gmail.com` so submissions do not disappear into a dead Netlify endpoint.
+- Public intake forms post to the Leaning Studios Google Apps Script web app and should redirect to `https://leaningstudios.com/thank-you.html` after a successful submission.
+- Backup contact email: `maggiosproductions@gmail.com`
 - Optional file upload form: `https://forms.gle/xwPcAECceSriL2AS9`
 - Preserved thank-you page: `/thank-you.html`
 - Primary service lanes: Record, Finish, Build, Audio Support, plus Not sure yet routing
