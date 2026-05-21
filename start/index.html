@@ -941,12 +941,18 @@
             <p class="eyebrow">Start Your Project</p>
             <h2 id="form-title">Send the project details</h2>
             <p class="section-copy">Tell Leaning Studios what you are trying to record or finish. The next step is review, confirmation, and scheduling.</p>
+            <p class="section-copy">
+              By submitting a request, you agree that Leaning Studios may use the information provided to review and respond to your inquiry.
+              Client information and project materials are handled confidentially by default.
+              View the <a href="../privacy-policy.html">Privacy Policy</a> for details.
+            </p>
           </div>
           <form
             class="start-form"
             name="leaning-studios-start-project"
             method="POST"
             action="https://script.google.com/macros/s/AKfycbygv5no9qzxymrBNR2yqs6GQmfWCoOAd3VnnRYKY03bQQFepqG1vEBnbQVCJptT1PQ/exec"
+            data-apps-script-intake
           >
 
             <label for="name">Name</label>
@@ -1000,10 +1006,14 @@
 
             <label for="music-file-link">Music / File Link</label>
             <input id="music-file-link" name="music-file-link" type="text">
+            <p class="section-copy">
+              Only send files you have permission to share. Project files and uploads are handled as confidential by default and are not used publicly without permission.
+            </p>
 
             <label for="project-notes">Project Notes</label>
             <textarea id="project-notes" name="project-notes" rows="5" required></textarea>
 
+            <p class="form-error" data-form-error hidden></p>
             <button class="button button-primary" type="submit">Send Project</button>
           </form>
         </div>
@@ -1046,8 +1056,9 @@
       <nav aria-label="Footer navigation">
         <a href="#start">Start Your Project</a>
         <a href="#packages">View Packages</a>
+        <a href="../privacy-policy.html">Privacy Policy</a>
       </nav>
     </footer>
-    <script src="/script.js?v=0.1.0.13-prehost" defer></script>
+    <script src="/script.js?v=0.1.0.14" defer></script>
   </body>
 </html>

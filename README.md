@@ -1,6 +1,8 @@
 # Leaning Studios Website
 
-Current accepted website build: `0.1.0.12`
+Current accepted website build: `0.1.0.14`
+
+Previous accepted content build: `0.1.0.12`
 
 Migration prep build: `0.1.0.13-prehost` - GitHub Pages Hosting Migration Prep
 
@@ -46,10 +48,28 @@ Then open `http://localhost:5500`.
 - Preserved thank-you page: `/thank-you.html`
 - Primary service lanes: Record, Finish, Build, Audio Support, plus Not sure yet routing
 - Studio Support page: `studio-support.html`
-- Public Studio Support packages: Quick Help + Setup, Project Support, Partner Support
+- Public Studio Support packages: Remote Support starts at $50, Project Support starts at $100, In-Person Support: starts at $200, and Partner Support is quoted by scope.
+- Package ladder is locked to Remote Support starts at $50, Project Support starts at $100, In-Person Support starts at $200, and Partner Support quoted by scope.
 - Featured Work uses four lazy-loaded YouTube embeds plus outbound YouTube links; Community Feedback uses outbound Facebook link cards only.
 - Studio photos use optimized web copies in `assets/images/studio/`; original photo sources are preserved under `assets/source/studio-photos/`.
 - The homepage hero card uses a lightweight six-photo carousel; the Studio Support page keeps its smaller support photo accents.
+
+## Release Notes
+
+### 0.1.0.14 - Privacy + Studio Support Integration
+
+- Added `privacy-policy.html`.
+- Added Privacy Policy footer links and intake/file-handling notices.
+- Updated Studio Support package ladder:
+  - Remote Support - starts at $50
+  - Project Support - starts at $100
+  - In-Person Support - starts at $200
+  - Partner Support - quoted by scope
+- Updated Studio Support copy inside the existing visual layout.
+- Centered the fourth Studio Support package card using a targeted CSS rule.
+- Restored Apps Script frontend redirect flow using `data-apps-script-intake`, `fetch`, `no-cors`, and local redirect to `/thank-you.html`.
+- Preserved GitHub Pages hosting and Google Apps Script intake.
+- No checkout, booking calendar, portal, database, or backend migration was added.
 
 ## Pricing Visibility
 

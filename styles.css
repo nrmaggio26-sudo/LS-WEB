@@ -1113,6 +1113,13 @@ h3 {
   border-top-color: var(--signal-red);
 }
 
+.support-package-card:nth-child(4) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 760px;
+}
+
 .package-kicker {
   margin: 0;
   color: var(--muted);
@@ -1290,6 +1297,12 @@ h3 {
   .support-photo-row,
   .support-list {
     grid-template-columns: 1fr;
+  }
+
+  .support-package-card:nth-child(4) {
+    grid-column: auto;
+    justify-self: stretch;
+    max-width: none;
   }
 
   .contact-copy {

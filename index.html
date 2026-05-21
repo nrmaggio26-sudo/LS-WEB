@@ -463,12 +463,18 @@
           <p class="package-disclaimer">
             Package selection does not confirm booking or payment. It helps Leaning Studios route your inquiry correctly.
           </p>
+          <p class="intake-notice">
+            By submitting a request, you agree that Leaning Studios may use the information provided to review and respond to your inquiry.
+            Client information and project materials are handled confidentially by default.
+            View the <a href="privacy-policy.html">Privacy Policy</a> for details.
+          </p>
 
           <form
             class="contact-form package-router-form"
             name="leaning-studios-package-intake"
             method="POST"
             action="https://script.google.com/macros/s/AKfycbygv5no9qzxymrBNR2yqs6GQmfWCoOAd3VnnRYKY03bQQFepqG1vEBnbQVCJptT1PQ/exec"
+            data-apps-script-intake
           >
             <fieldset class="form-section lane-selector">
               <legend>Choose your lane</legend>
@@ -696,10 +702,14 @@
               <span>I confirm I have the right to share these files or project details with Leaning Studios for review.</span>
             </label>
 
+            <p class="form-error" data-form-error hidden></p>
             <button class="button button-primary" type="submit">Send Project / Contact Leaning Studios</button>
           </form>
 
-          <p class="upload-help">Use this file upload form only if you need to send audio, reference files, or project folders. File uploads may require Google sign-in.</p>
+          <p class="upload-help">
+            Use this file upload form only if you need to send audio, reference files, or project folders. File uploads may require Google sign-in.
+            Only send files you have permission to share. Project files and uploads are handled as confidential by default and are not used publicly without permission.
+          </p>
           <a
             class="button button-secondary upload-button"
             href="https://forms.gle/xwPcAECceSriL2AS9"
@@ -729,10 +739,11 @@
         <a href="https://www.youtube.com/@leaning.studios" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="/#contact">Request Studio Support</a>
         <a href="studio-support.html">Studio Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
       </nav>
     </footer>
 
     <a class="mobile-sticky" href="#contact">Send Project / Contact</a>
-    <script src="script.js?v=0.1.0.13-prehost" defer></script>
+    <script src="script.js?v=0.1.0.14" defer></script>
   </body>
 </html>

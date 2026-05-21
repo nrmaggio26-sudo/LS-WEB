@@ -29,6 +29,53 @@ if (heroCarousel) {
   }
 }
 
+const appsScriptForms = document.querySelectorAll("[data-apps-script-intake]");
+
+appsScriptForms.forEach((form) => {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "";
+    const errorMessage = form.querySelector("[data-form-error]");
+
+    if (errorMessage) {
+      errorMessage.textContent = "";
+      errorMessage.hidden = true;
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        mode: "no-cors",
+      });
+
+      window.location.href = "/thank-you.html";
+    } catch (error) {
+      console.error("Leaning Studios intake submit failed:", error);
+
+      if (errorMessage) {
+        errorMessage.textContent =
+          "Something went wrong sending the form. Please email maggiosproductions@gmail.com directly.";
+        errorMessage.hidden = false;
+      } else {
+        alert("Something went wrong sending the form. Please email maggiosproductions@gmail.com directly.");
+      }
+
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText || "Send Project";
+      }
+    }
+  });
+});
+
 const packageRouterForm = document.querySelector(".package-router-form");
 
 if (packageRouterForm) {
